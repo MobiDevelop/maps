@@ -1,0 +1,23 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+*.so
+.classpath
+.project
+.settings/
+.gradle/
+.idea/
+build/
+bin/
+out/
+gen/
+local.properties
+
+# Exceptions #
+!gradle-wrapper.jar

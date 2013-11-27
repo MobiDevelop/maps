@@ -1,0 +1,4 @@
+rootProject.name = 'MAPS'
+
+include ':maps'
+include ':maps-basic'

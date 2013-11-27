@@ -1,0 +1,24 @@
+allprojects {
+    repositories {
+        mavenCentral()
+		maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+subprojects {
+	apply plugin: "eclipse"
+	apply plugin: "idea"
+}
+
+project(":maps") {
+	apply plugin: 'java'
+}
+
+project(":maps-basic") {
+	apply plugin: 'java'
+
+	dependencies {
+		compile project(':maps');
+		compile "com.badlogicgames.gdx:gdx:$project.gdxVersion"
+	}
+}
