@@ -105,14 +105,35 @@ public class BasicMap implements Map, Disposable {
 		return resources;
 	}
 
+	/**
+	 * Constructs a new {@code BasicMap} with a position and size of 0,0.
+	 */
 	public BasicMap() {
 		this(0, 0);
 	}
 
+	/**
+	 * Constructs a new {@code BasicMap} with the given size, positioned at 0,0.
+	 * The size may be expressed in any unit which makes sense for the
+	 * particular application, be it pixels, meters, or bananas.
+	 *
+	 * @param width   the width of the map
+	 * @param height  the height of the map
+	 */
 	public BasicMap(float width, float height) {
 		this(0, 0, width, height);
 	}
 
+	/**
+	 * Constructs a new {@code BasicMap} with the given position and size. The
+	 * position and size may be expressed in any unit which makes sense for the
+	 * particular application, be it pixels, meters, or bananas.
+	 *
+	 * @param x       the position of the map on the x axis
+	 * @param y       the position of the map on the y axis
+	 * @param width   the width of the map
+	 * @param height  the height of the map
+	 */
 	public BasicMap(float x, float y, float width, float height) {
 		this.x = x;
 		this.y = y;
@@ -123,14 +144,35 @@ public class BasicMap implements Map, Disposable {
 		this.resources = createMapResources();
 	}
 
+	/**
+	 * Creates a {@link MapLayers} instance for this Map. By default, creates an
+	 * instance of {@link BasicMapLayers}. Subclasses may override this method
+	 * to provide their own MapLayers implementation.
+	 *
+	 * @return a {@code MapLayers} instance
+	 */
 	protected MapLayers createMapLayers() {
 		return new BasicMapLayers();
 	}
 
+	/**
+	 * Creates a {@link MapProperties} instance for this Map. By default, creates an
+	 * instance of {@link BasicMapProperties}. Subclasses may override this method
+	 * to provide their own MapProperties implementation.
+	 *
+	 * @return a {@code MapProperties} instance
+	 */
 	protected MapProperties createMapProperties() {
 		return new BasicMapProperties();
 	}
 
+	/**
+	 * Creates a {@link MapResources} instance for this Map. By default, creates an
+	 * instance of {@link BasicMapResources}. Subclasses may override this method
+	 * to provide their own MapResources implementation.
+	 *
+	 * @return a {@code MapResources} instance
+	 */
 	protected MapResources createMapResources() {
 		return new BasicMapResources();
 	}

@@ -16,6 +16,16 @@
 
 package com.mobidevelop.maps;
 
+/**
+ * The {@code MapObject} interface represents an object in a {@link Map}. In its
+ * simplest form, a MapObject only represents a "thing" that has a position and
+ * size in the Map. It is up to the implementation to define the specifics.
+ * <p>
+ * A MapObject can be positioned and sized in a MapLayer according to the
+ * MapLayer's coordinate system.
+ *
+ * @author Justin Shapcott
+ */
 public interface MapObject {
 
 	public MapLayer getLayer();

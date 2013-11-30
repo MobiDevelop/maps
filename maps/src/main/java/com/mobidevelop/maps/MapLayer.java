@@ -16,6 +16,17 @@
 
 package com.mobidevelop.maps;
 
+/**
+ * The {@code MapLayer} interface represents a single layer of a {@link Map},
+ * and is comprised of any number of {@link MapObject objects}. The primary
+ * purpose of a MapLayer is to organize objects in a Map. Implementations may
+ * include specialized functionality to add additional purposes as needed.
+ * <p>
+ * A MapLayer can be positioned and sized in the Map according to the Map's
+ * coordinate system.
+ *
+ * @author Justin Shapcott
+ */
 public interface MapLayer {
 
 	public Map getMap();

@@ -19,6 +19,11 @@ package com.mobidevelop.maps;
 import java.util.Comparator;
 import java.util.Iterator;
 
+/**
+ * The {@code MapLayers} interface represents a collection of {@link MapLayer}.
+ *
+ * @author Justin Shapcott
+ */
 public interface MapLayers extends Iterable<MapLayer> {
 
 	public int getCount();

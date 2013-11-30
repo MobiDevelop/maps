@@ -16,6 +16,13 @@
 
 package com.mobidevelop.maps;
 
+/**
+ * The {@code MapResources} interface represents a collection of resources
+ * available to a {@link Map}. Resources are stored by name and type, so
+ * multiple instances of a particular resource type may exist.
+ *
+ * @author Justin Shapcott
+ */
 public interface MapResources {
 	
 	public <T> T get(Class<T> type);

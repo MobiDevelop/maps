@@ -19,6 +19,11 @@ package com.mobidevelop.maps;
 import java.util.Comparator;
 import java.util.Iterator;
 
+/**
+ * The {@code MapObjects} interface represents a collection of {@link MapObject}.
+ *
+ * @author Justin Shapcott
+ */
 public interface MapObjects extends Iterable<MapObject> {
 
 	public int getCount();

@@ -16,6 +16,13 @@
 
 package com.mobidevelop.maps;
 
+/**
+ * The {@code Map} interface represents a 2d world comprised of any number of
+ * {@link MapLayer layers}, where each layer is comprised of any number of
+ * {@link MapObject objects}.
+ *
+ * @author Justin Shapcott
+ */
 public interface Map {
 
 	public String getName();

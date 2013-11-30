@@ -16,11 +16,22 @@
 
 package com.mobidevelop.maps;
 
+/**
+ * The {@code MapProperties} interface represents a key-value mapping of custom
+ * properties throughout the interfaces maps api. Each {@link Map},
+ * {@link MapLayer}, and {@link MapObject} can have any number of custom
+ * properties of any type. The MapProperties defines methods to cast or convert
+ * properties to various types (if possible).
+ *
+ * @author Justin Shapcott
+ */
 public interface MapProperties {
 
 	public boolean containsKey(String key);
 
 	public Iterable<String> getKeys();
+
+	public Iterable<Object> getValues();
 
 	public Object get(String key);
 
@@ -39,7 +50,7 @@ public interface MapProperties {
 	public Float getAsFloat(String key);
 
 	public Float getAsFloat(String key, Float defaultValue);
-	
+
 	public Integer getAsInteger(String key);
 
 	public Integer getAsInteger(String key, Integer defaultValue);
@@ -63,5 +74,5 @@ public interface MapProperties {
 	public void remove(String key);
 
 	public void clear();
-	
+
 }

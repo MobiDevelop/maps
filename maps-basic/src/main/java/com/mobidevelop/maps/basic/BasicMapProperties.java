@@ -35,6 +35,10 @@ public class BasicMapProperties implements MapProperties {
 		return data.keys();
 	}
 
+	public Iterable<Object> getValues() {
+		return data.values();
+	}
+
 	public Object get(String key) {
 		return data.get(key);
 	}
