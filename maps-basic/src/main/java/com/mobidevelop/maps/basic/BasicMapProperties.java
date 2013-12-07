@@ -17,6 +17,7 @@
 package com.mobidevelop.maps.basic;
 
 import com.badlogic.gdx.utils.ObjectMap;
+import com.badlogic.gdx.utils.reflect.ClassReflection;
 import com.mobidevelop.maps.MapProperties;
 
 public class BasicMapProperties implements MapProperties {
@@ -43,6 +44,18 @@ public class BasicMapProperties implements MapProperties {
 		return data.get(key);
 	}
 
+	public <T> T get(String key, Class<T> type) {
+		return (T) get(key);
+	}
+
+	public <T> T get(String key, T defaultValue, Class<T> type) {
+		Object value = get(key);
+		if (value == null || !ClassReflection.isAssignableFrom(type, value.getClass())) {
+			return defaultValue;
+		}
+		return (T) value;
+	}
+
 	public Boolean getAsBoolean(String key) {
 		Object value = data.get(key);
 		try {
@@ -58,7 +71,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Boolean getAsBoolean(String key, Boolean defaultValue) {
 		Boolean value = getAsBoolean(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public Byte getAsByte(String key) {
@@ -84,7 +97,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Byte getAsByte(String key, Byte defaultValue) {
 		Byte value = getAsByte(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public Double getAsDouble(String key) {
@@ -110,7 +123,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Double getAsDouble(String key, Double defaultValue) {
 		Double value = getAsDouble(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public Float getAsFloat(String key) {
@@ -136,7 +149,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Float getAsFloat(String key, Float defaultValue) {
 		Float value = getAsFloat(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public Integer getAsInteger(String key) {
@@ -162,7 +175,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Integer getAsInteger(String key, Integer defaultValue) {
 		Integer value = getAsInteger(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public Long getAsLong(String key) {
@@ -188,7 +201,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Long getAsLong(String key, Long defaultValue) {
 		Long value = getAsLong(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public Short getAsShort(String key) {
@@ -214,7 +227,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public Short getAsShort(String key, Short defaultValue) {
 		Short value = getAsShort(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public String getAsString(String key) {
@@ -228,7 +241,7 @@ public class BasicMapProperties implements MapProperties {
 
 	public String getAsString(String key, String defaultValue) {
 		String value = getAsString(key);
-		return value == null? defaultValue : value;
+		return value == null ? defaultValue : value;
 	}
 
 	public void put(String key, Object value) {

@@ -34,6 +34,10 @@ public interface MapProperties {
 	public Iterable<Object> getValues();
 
 	public Object get(String key);
+	
+	public <T> T get(String key, Class<T> type);
+
+	public <T> T get(String key, T defaultValue, Class<T> type);
 
 	public Boolean getAsBoolean(String key);
 
