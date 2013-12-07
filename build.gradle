@@ -22,3 +22,13 @@ project(":maps-basic") {
 		compile "com.badlogicgames.gdx:gdx:$project.gdxVersion"
 	}
 }
+
+project(":maps-editor") {
+	apply plugin: 'java'
+
+	dependencies {
+		compile project(':maps');
+		compile project(':maps-basic');
+		compile "com.badlogicgames.gdx:gdx:$project.gdxVersion"
+	}
+}

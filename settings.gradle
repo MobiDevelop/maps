@@ -2,3 +2,4 @@ rootProject.name = 'MAPS'
 
 include ':maps'
 include ':maps-basic'
+include ':maps-editor'
