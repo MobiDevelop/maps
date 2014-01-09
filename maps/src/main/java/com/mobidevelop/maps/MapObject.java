@@ -64,7 +64,7 @@ public interface MapObject {
 
 	public void setRotation(float rotation);
 
-	public boolean getVisible();
+	public boolean isVisible();
 
 	public void setVisible(boolean visible);
 

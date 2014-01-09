@@ -53,7 +53,7 @@ public interface MapLayer {
 
 	public void setHeight(float height);
 
-	public boolean getVisible();
+	public boolean isVisible();
 
 	public void setVisible(boolean visible);
 
