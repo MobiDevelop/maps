@@ -131,7 +131,7 @@ public class BasicMapObject implements MapObject {
 	}
 
 	@Override
-	public boolean getVisible() {
+	public boolean isVisible() {
 		return visible;
 	}
 

@@ -102,7 +102,7 @@ public class BasicMapLayer implements MapLayer {
 	}
 
 	@Override
-	public boolean getVisible() {
+	public boolean isVisible() {
 		return visible;
 	}
 
