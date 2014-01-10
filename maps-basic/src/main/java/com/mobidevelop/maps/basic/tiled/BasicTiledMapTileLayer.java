@@ -115,7 +115,7 @@ public class BasicTiledMapTileLayer implements TiledMapTileLayer {
 	}
 
 	@Override
-	public boolean getVisible() {
+	public boolean isVisible() {
 		return visible;
 	}
 
