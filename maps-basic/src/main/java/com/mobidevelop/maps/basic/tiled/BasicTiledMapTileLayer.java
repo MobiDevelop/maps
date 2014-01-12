@@ -181,6 +181,9 @@ public class BasicTiledMapTileLayer implements TiledMapTileLayer {
 
 	@Override
 	public void setTile(int x, int y, TiledMapTile tile) {
+        if (cells[y][x] == null) {
+            cells[y][x] = new Cell();
+        }
 		cells[y][x].tile = tile;
 	}
 
